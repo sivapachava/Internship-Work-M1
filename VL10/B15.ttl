@@ -1,0 +1,29 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
+@prefix htv: <http://www.w3.org/2011/http#> .
+@prefix js: <https://www.w3.org/2019/wot/json-schema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix td: <https://www.w3.org/2019/wot/td#> .
+
+<https://ci.mines-stetienne.fr/kg/itmfactory/vl10/B15> rdfs:label "sensor" ;
+    dct:identifier "https://www.sick.com/fr/en/magnetic-cylinder-sensors/position-sensors/mps-t/mps-224tltq0/p/p318150?ff_data=JmZmX2lkPXAzMTgxNTAmZmZfbWFzdGVySWQ9cDMxODE1MCZmZl90aXRsZT1NUFMtMjI0VExUUTAmZmZfcXVlcnk9SU8tTElOSyZmZl9wb3M9MjAmZmZfb3JpZ1Bvcz0yMCZmZl9wYWdlPTEmZmZfcGFnZVNpemU9MjQmZmZfb3JpZ1BhZ2VTaXplPTI0JmZmX3NpbWk9OTQuMA==" ;
+    schema1:manufacture "SICK Sensor Intelligence" ;
+    rdfs:comment "It is used to detect bottle on storage rack and to measure distance of the bottle from sensor"@en ;
+    skos:prefLabel "B15" ;
+    td:hasPropertyAffordance [ a js:BooleanSchema,
+                js:IntegerSchema,
+                td:PropertyAffordance ;
+            dct:description "It is used to detect bottle on storage rack and to measure distance of the bottle from sensor"@en ;
+            dct:title "detect bottle on storage rack" ;
+            js:readOnly "True" ;
+            js:writeOnly "False" ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget "https://ci.mines-stetienne.fr/simu/storageRack/properties/Mesure_distance_Pot" ] ;
+            td:isObservable "False" ;
+            td:name "Mesure_distance_Pot" ] .
+

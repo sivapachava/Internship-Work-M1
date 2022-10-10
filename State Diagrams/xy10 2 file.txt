@@ -1,0 +1,15 @@
+@startuml
+state c <<choice>>
+
+[*] --> WaitingForOperation
+WaitingForOperation --> c : RetractedTray
+
+c --> Movingtofirstconveyor : OpticalsensorsecondconveyorI2.6 == True
+c -->  TrayUnstackingCylindernotExtendedI3.2 : Opticalsensorpot1I3.0&opticalsensorpot2I3.1 == True
+
+Movingtofirstconveyor -up-> WaitingForOperation
+TrayUnstackingCylindernotExtendedI3.2 -up-> WaitingForOperation
+
+WaitingForOperation -right-> [*]
+
+@enduml

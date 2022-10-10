@@ -1,0 +1,21 @@
+@startuml
+state c <<choice>>
+
+[*] --> WaitingForOperation
+WaitingForOperation -->c
+
+
+c --> ValueisInt : OutputYAxisQ2.3 == True
+c --> ValueisZero : OutputYAxisQ2.3 == False
+
+c --> ValueisInt : OpeningGrippersQ2.1 == True
+c --> ValueisZero : OpeningGrippersQ2.1 == False
+
+c --> ValueisInt : ReturnYAxisQ2.4 == True
+c --> ValueisZero : ReturnYAxisQ2.4 == False
+
+WaitingForOperation -right-> [*]
+
+ValueisInt -up-> WaitingForOperation
+ValueisZero -up-> WaitingForOperation
+@enduml

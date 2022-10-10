@@ -1,0 +1,37 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix eco: <http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4#> .
+@prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
+@prefix htv: <http://www.w3.org/2011/http#> .
+@prefix js: <https://www.w3.org/2019/wot/json-schema#> .
+@prefix onto: <https://ci.mines-stetienne.fr/kg/ontology#> .
+@prefix pto: <http://www.productontology.org/id/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix td: <https://www.w3.org/2019/wot/td#> .
+
+<https://ci.mines-stetienne.fr/kg/itmfactory/dx10/B5> a eco:C_AGZ376003,
+        pto:Level_Sensor,
+        pto:Sensor ;
+    dct:identifier "https://www.leuze.com/en/usa/products_us/switching_sensors_us/optical_sensors_us/photoelectric_sensors_light_scanners_cubic_us/5_series_us/lichttaster_mit_hintergrundausblendung_us_5/ht_5_us/selector.php?supplier_aid=50135262&grp_id=1467795393506&lang=eng" ;
+    schema1:manufacture "Leuze" ;
+    rdfs:Label "Diffuse sensor with background suppression" ;
+    rdfs:comment "It is used to detects the items and indicate the product presence in the bottle."@en ;
+    skos:prefLabel "B5" ;
+    sosa:observes "Indicates the downstream accumulation  and detecte the product presence in the bottle on DX10 machine of the IT'm factory."@en ;
+    td:hasPropertyAffordance [ a onto:OpticalSensorStatus,
+                js:NumberSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates bottle reaches to end of the conveyor belt and it detects the product presence in the bottle on DX10 machine of the IT'm factory."@en ;
+            dct:title "Downstream accumulation" ;
+            js:readOnly "True" ;
+            js:writeOnly "False" ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget "https://ci.mines-stetienne.fr/simu/fillingWorkshop/properties/AccumulationAvalB5" ] ;
+            td:isObservable "False" ;
+            td:name "AccumulationAvalB5" ] .
+

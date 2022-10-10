@@ -1,0 +1,12 @@
+@startuml
+
+state c <<choice>>
+[*] --> WaitingForOperation
+WaitingForOperation --> c :CoveyorHeadStatus == True
+c --> movingandFilling : MagneticValveStatus == True
+c --> stopConveyorMoving : DownstreamPresence == False
+
+movingandFilling -up-> WaitingForOperation
+stopConveyorMoving --> WaitingForOperation
+WaitingForOperation -right-> [*]
+@enduml

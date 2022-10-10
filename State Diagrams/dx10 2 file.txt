@@ -1,0 +1,19 @@
+@startuml
+
+state c <<choice>>
+
+
+[*] --> WaitingForOperation
+WaitingForOperation --> c : Downstatus == True
+c --> StopConveyor : valve == close
+c  --> MovingConveyor : valve == open
+
+MovingConveyor --> Moving : [PositionX==MaxPosition]move/[PositionX==MinPosition]
+StopConveyor -up-> WaitingForOperation
+Moving -up-> WaitingForOperation
+
+WaitingForOperation -right-> [*]
+
+
+
+@enduml

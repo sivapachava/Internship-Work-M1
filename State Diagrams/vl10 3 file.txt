@@ -1,0 +1,16 @@
+@startuml
+[*] --> WaitingForOperation
+state c <<choice>>
+
+WaitingForOperation -->c
+
+c -->ZAxisBrakeHoldQ2.6 : YAxisOutputQ2.3 == false
+c -->ZAxisBrakeReleaseQ2.6 : YAxisOutputQ2.3 == true
+
+c -->ZAxisBrakeHoldQ2.6 : ReturnYAxisQ2.4 == true
+c -->ZAxisBrakeReleaseQ2.6 : ReturnYAxisQ2.4 == false
+
+ZAxisBrakeHoldQ2.6 -up-> WaitingForOperation
+ZAxisBrakeReleaseQ2.6 -up-> WaitingForOperation
+WaitingForOperation -right->[*]
+@enduml

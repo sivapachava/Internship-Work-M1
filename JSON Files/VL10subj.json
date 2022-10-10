@@ -1,0 +1,271 @@
+[
+    {
+        "@id" : "https://ci.mines-stetienne.fr/kg/itmfactory/vl10/B1",
+        "@type" : [ "http://www.productontology.org/doc/Proximity_sensor", "http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AKE143002-tax", "http://www.productontology.org/doc/sensor"],
+        "https://www.w3.org/2000/01/rdf-schema#/label": "E proximity Switch type Sensor",
+        "https://schema.org/manufacturer": "igus",
+        "http://purl.org/dc/terms/identifier": {
+            "@id": "https://www.igus.com/product?artNr=INI-AB-I-025-B-AA"
+        },
+        "http://www.w3.org/ns/sosa/observes" : {
+            "@id": "https://ci.mines-stetienne.fr/kg/itmfactory/vl10/B1#this"
+        },
+        "http://www.w3.org/2000/01/rdf-schema/comment": "Indicates the status of the Cartesian robot X axis at the end limit point on VL10 machine of the IT'm factory."
+    },
+
+    {
+        "@id" : ["https://ci.mines-stetienne.fr/kg/itmfactory/vl10/B2", "http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AKE143002-tax"],
+        "@type" : "http://www.productontology.org/doc/Proximity_sensor",
+        "https://www.w3.org/2000/01/rdf-schema#/label": "E proximity Switch type Sensor",
+        "https://schema.org/manufacturer": "igus",
+        "http://purl.org/dc/terms/identifier": {
+            "@id": "https://www.igus.com/product?artNr=INI-AB-I-025-B-AA"
+        },
+        "http://www.w3.org/ns/sosa/observes" : {
+            "@id": "https://ci.mines-stetienne.fr/kg/itmfactory/vl10/B2#this"
+        },
+        "http://www.w3.org/2000/01/rdf-schema/comment": "Indicates the status of the Cartesian robot X axis at the front limit point on VL10 machine of the IT'm factory."
+    },
+
+    {
+        "@id" :"https://ci.mines-stetienne.fr/kg/itmfactory/vl10/B3",
+        "@type" : ["http://www.productontology.org/doc/Proximity_sensor", "http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AKE143002-tax"],
+        "https://www.w3.org/2000/01/rdf-schema#/label": "E proximity Switch type Sensor",
+        "https://schema.org/manufacturer": "igus",
+        "http://purl.org/dc/terms/identifier": {
+            "@id": "https://www.igus.com/product?artNr=INI-AB-I-025-A-AA"
+        },
+        "http://www.w3.org/ns/sosa/observes" : {
+            "@id": "https://ci.mines-stetienne.fr/kg/itmfactory/vl10/B3#this"
+        },
+        "http://www.w3.org/2000/01/rdf-schema/comment": "Indicates the status of the Cartesian robot X axis reference on VL10 machine of the IT'm factory."
+    },
+
+    {
+        "@id" : [ "https://ci.mines-stetienne.fr/kg/itmfactory/vl10/B4", "http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AKE143002-tax"],
+        "@type" : "http://www.productontology.org/doc/Proximity_sensor",
+        "https://www.w3.org/2000/01/rdf-schema#/label": "E proximity Switch type Sensor",
+        "https://schema.org/manufacturer": "igus",
+        "http://purl.org/dc/terms/identifier": {
+            "@id": "https://www.igus.com/product?artNr=INI-AB-I-025-B-AA"
+        },
+        "http://www.w3.org/ns/sosa/observes" : {
+            "@id": "https://ci.mines-stetienne.fr/kg/itmfactory/vl10/B4#this"
+        },
+        "http://www.w3.org/2000/01/rdf-schema/comment": "Indicates the status of the Cartesian robot reaches to bottom limit point in Z axis direction on VL10 machine of the IT'm factory."
+    },
+
+    {
+        "@id" : [ "https://ci.mines-stetienne.fr/kg/itmfactory/vl10/B5", "http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AKE143002-tax"],
+        "@type" : "http://www.productontology.org/doc/Proximity_sensor",
+        "https://www.w3.org/2000/01/rdf-schema#/label": "E proximity Switch type Sensor",
+        "https://schema.org/manufacturer": "igus",
+        "http://purl.org/dc/terms/identifier": {
+            "@id": "https://www.igus.com/product?artNr=INI-AB-I-025-B-AA"
+        },
+        "http://www.w3.org/ns/sosa/observes" : {
+            "@id": "https://ci.mines-stetienne.fr/kg/itmfactory/vl10/B5#this"
+        },
+        "http://www.w3.org/2000/01/rdf-schema/comment": "Indicates the status of the Cartesian robot reaches to top limit positions in Z axis direction on the VL10 Machine of the IT'm factory."
+    },
+
+    {
+        "@id" :"https://ci.mines-stetienne.fr/kg/itmfactory/vl10/B6",
+        "@type" : ["http://www.productontology.org/doc/Proximity_sensor", "http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AKE143002-tax"],
+        "https://www.w3.org/2000/01/rdf-schema#/label": "E proximity Switch type Sensor",
+        "https://schema.org/manufacturer": "igus",
+        "http://purl.org/dc/terms/identifier": {
+            "@id": "https://www.igus.com/product?artNr=INI-AB-I-025-A-AA"
+        },
+        "http://www.w3.org/ns/sosa/observes" : {
+            "@id": "https://ci.mines-stetienne.fr/kg/itmfactory/vl10/B6#this"
+        },
+        "http://www.w3.org/2000/01/rdf-schema/comment": "Indicates the status of the Cartesian robot reaches to intial positions in Z axis direction on the VL10 Machine of the IT'm factory."
+    },
+
+    {
+        "@id" : "https://ci.mines-stetienne.fr/kg/itmfactory/vl10/B7",
+        "@type" : [ "http://www.productontology.org/doc/Compressed_air, http://www.productontology.org/doc/Connecting_rod", "http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AKE702002-tax"],
+        "https://www.w3.org/2000/01/rdf-schema#/label": "Guide Rod Type Compact Cylinder",
+        "https://schema.org/manufacturer": "SMC",
+        "http://purl.org/dc/terms/identifier": {
+            "@id": "https://www.smc.eu/en-eu/products/c-d-qm-compact-cylinder-guide-rod-type~34304~cfg?partNumber=CDQMA32TF-40"
+        },
+        "http://www.w3.org/ns/sosa/observes" : {
+            "@id": "https://ci.mines-stetienne.fr/kg/itmfactory/vl10/B7#this"
+        },
+        "http://www.w3.org/2000/01/rdf-schema/comment": "Used tp stops bottle at airlock cylinder if bottle presence at B17 on the VL10 Machine of the IT'm factory."
+    },
+
+    {
+        "@id" : "https://ci.mines-stetienne.fr/kg/itmfactory/vl10/B8",
+        "@type" : ["http://www.productontology.org/doc/Proximity_sensor", "http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AKP253002-tax"],
+        "https://www.w3.org/2000/01/rdf-schema#/label": "Miniature photo-electric proximity sensor",
+        "https://schema.org/manufacturer": "SICK Sensor Intelligence",
+        "http://purl.org/dc/terms/identifier": {
+            "@id": "https://shop.appliedc.com/products/1042049"
+        },
+        "http://www.w3.org/ns/sosa/observes" : {
+            "@id": "https://ci.mines-stetienne.fr/kg/itmfactory/vl10/B8#this"
+        },
+        "http://www.w3.org/2000/01/rdf-schema/comment": "Indicates bottle at starting position on the VL10 Machine of the IT'm factory."
+        
+    },
+
+    {
+        "@id" : "https://ci.mines-stetienne.fr/kg/itmfactory/vl10/B9",
+        "@type" : ["http://www.productontology.org/doc/Proximity_sensor", "http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AKP253002-tax"],
+        "https://www.w3.org/2000/01/rdf-schema#/label": "Miniature photo-electric proximity sensor",
+        "https://schema.org/manufacturer": "SICK Sensor Intelligence",
+        "http://purl.org/dc/terms/identifier": {
+            "@id": "https://shop.appliedc.com/products/1042049"
+        },
+        "http://www.w3.org/ns/sosa/observes" : {
+            "@id": "https://ci.mines-stetienne.fr/kg/itmfactory/vl10/B9#this"
+        },
+        "http://www.w3.org/2000/01/rdf-schema/comment": "Indicates bottle exits the air lock cylinder on the VL10 Machine of the IT'm factory."
+    },
+    
+    {
+        "@id" : "https://ci.mines-stetienne.fr/kg/itmfactory/vl10/B10",
+        "@type" : [ "http://www.productontology.org/doc/Photoelectric_sensor", "http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AKP251002-tax"],
+        "https://www.w3.org/2000/01/rdf-schema#/label": "Polarized retro-reflective photoelectric sensor",
+        "https://schema.org/manufacturer": "Leuze",
+        "http://purl.org/dc/terms/identifier": {
+            "@id": "https://www.leuze.com/en/usa/products_us/switching_sensors_us/optical_sensors_us/photoelectric_sensors_light_scanners_cubic_us/5_series_us/retro_reflective_photoelectric_sensors_us_2/prk5_us/selector.php?supplier_aid=50128200&grp_id=A1-1-1-1-3-2-1&lang=eng"
+        },
+        "http://www.w3.org/ns/sosa/observes" : {
+            "@id": "https://ci.mines-stetienne.fr/kg/itmfactory/vl10/B10#this"
+        },
+        "http://www.w3.org/2000/01/rdf-schema/comment": "Used to perform real-time optimization of products and production processes on VL10 machine of the IT'm factory."
+    },
+
+    {
+        "@id" : "https://ci.mines-stetienne.fr/kg/itmfactory/vl10/B11",
+        "@type" : [ "http://www.productontology.org/doc/Photoelectric_sensor", "http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AKP251002-tax"],
+        "https://www.w3.org/2000/01/rdf-schema#/label": "Polarized retro-reflective photoelectric sensor",
+        "https://schema.org/manufacturer": "Leuze",
+        "http://purl.org/dc/terms/identifier": {
+            "@id": "https://www.leuze.com/en/usa/products_us/switching_sensors_us/optical_sensors_us/photoelectric_sensors_light_scanners_cubic_us/5_series_us/retro_reflective_photoelectric_sensors_us_2/prk5_us/selector.php?supplier_aid=50128200&grp_id=A1-1-1-1-3-2-1&lang=eng"
+        },
+        "http://www.w3.org/ns/sosa/observes" : {
+            "@id": "https://ci.mines-stetienne.fr/kg/itmfactory/vl10/B11#this"
+        },
+        "http://www.w3.org/2000/01/rdf-schema/comment": "Used to perform real-time optimization of products and production processes on VL10 machine of the IT'm factory."
+    },
+
+    {
+        "@id" : "https://ci.mines-stetienne.fr/kg/itmfactory/vl10/B12",
+        "@type" : [ "http://www.productontology.org/doc/Sensor, https://en.wikipedia.org/wiki/Light_curtain, http://www.productontology.org/doc/Light_curtain", "http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AKE650002-tax"],
+        "https://www.w3.org/2000/01/rdf-schema#/label": "Safety light curtains miniTwin",
+        "https://schema.org/manufacturer": "SICK Sensor Intelligence",
+        "http://purl.org/dc/terms/identifier": {
+            "@id": "https://www.sick.com/fr/fr/barrages-immateriels-de-securite/barrages-immateriels-de-securite/minitwin/c4mt-01214abb03bb0/p/p123668"
+        },
+        "http://www.w3.org/ns/sosa/observes" : {
+            "@id": "https://ci.mines-stetienne.fr/kg/itmfactory/vl10/B12#this"
+        },
+        "http://www.w3.org/2000/01/rdf-schema/comment": "Used to perform real-time optimization of products and production processes on VL10 machine of the IT'm factory." 
+    },
+
+    {
+        "@id" : "https://ci.mines-stetienne.fr/kg/itmfactory/vl10/B14",
+        "@type" : [ "http://www.productontology.org/doc/Position_sensor", "http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AGZ379003-tax"],
+        "https://www.w3.org/2000/01/rdf-schema#/label": "Position sensors",
+        "https://schema.org/manufacturer": "SICK Sensor Intelligence",
+        "http://purl.org/dc/terms/identifier": {
+            "@id": "https://www.sick.com/fr/en/magnetic-cylinder-sensors/position-sensors/mps-t/mps-224tltq0/p/p318150?ff_data=JmZmX2lkPXAzMTgxNTAmZmZfbWFzdGVySWQ9cDMxODE1MCZmZl90aXRsZT1NUFMtMjI0VExUUTAmZmZfcXVlcnk9SU8tTElOSyZmZl9wb3M9MjAmZmZfb3JpZ1Bvcz0yMCZmZl9wYWdlPTEmZmZfcGFnZVNpemU9MjQmZmZfb3JpZ1BhZ2VTaXplPTI0JmZmX3NpbWk9OTQuMA=="
+        },
+        "http://www.w3.org/ns/sosa/observes" : {
+            "@id": "https://ci.mines-stetienne.fr/kg/itmfactory/vl10/B14#this"
+        },
+        "http://www.w3.org/2000/01/rdf-schema/comment": "Indicates linear motion of the cartecian robot in Y-Axis direction to graps the bottle on the VL10 Machine of the IT'm factory."
+    },
+
+    {
+        "@id" : "https://ci.mines-stetienne.fr/kg/itmfactory/vl10/B16",
+        "@type" : ["http://www.productontology.org/doc/Vacuum_pump, http://www.productontology.org/doc/Pump", "http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AKL924002-tax"],
+        "https://www.w3.org/2000/01/rdf-schema#/label": "Vacuum Unit - Ejector System/ Vacuum Pump System",
+        "https://schema.org/manufacturer": "SMC",
+        "http://purl.org/dc/terms/identifier": {
+            "@id": "https://www.smc.eu/en-eu/products/zk2-a~164877~nav?productId=164879"
+        },
+        "http://www.w3.org/ns/sosa/observes" : {
+            "@id": "https://ci.mines-stetienne.fr/kg/itmfactory/vl10/B16#this"
+        },
+        "http://www.w3.org/2000/01/rdf-schema/comment": "provide vaccum to get bottle on VL10 machine of the IT'm factory."
+    },
+
+    {
+        "@id" : "https://ci.mines-stetienne.fr/kg/itmfactory/vl10/conveyor/downstream-presence-ir-sensor#this",
+        "@type" : [ "http://www.productontology.org/doc/Proximity_sensor", "http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AKP253002-tax"],
+        "https://www.w3.org/2000/01/rdf-schema#/label": "Miniature photo-electric proximity sensor",
+        "https://schema.org/manufacturer": "SICK Sensor Intelligence",
+        "http://purl.org/dc/terms/identifier": {
+            "@id": "https://shop.appliedc.com/products/1042049"
+        },
+        "http://www.w3.org/ns/sosa/observes" : {
+            "@id": "https://ci.mines-stetienne.fr/kg/itmfactory/vl10/B17#this"
+        },
+        "http://www.w3.org/2000/01/rdf-schema/comment": "indicates bottle at end position (downstream accumulation) on VL10 machine of the IT'm factory."
+    },
+
+    {
+        "@id" : "https://ci.mines-stetienne.fr/kg/itmfactory/vl10/conveyor/motor#this",
+        "@type" : ["http://www.productontology.org/doc/Worm_drive, http://www.productontology.org/doc/Gear", "http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AKH396002-tax"],
+        "https://www.w3.org/2000/01/rdf-schema#/label": "WORM GEAR REDUCERS, COMBINED AND WITH PRE-STAGE REDUCTION UNIT",
+        "https://schema.org/manufacturer": "Motovario",
+        "http://purl.org/dc/terms/identifier": {
+            "@id": "https://www.motovario.com/eng/products/worm-gear-reducers--vsf-series/worm-gear-reducers-combined-and-with-pre-stage-reduction-unit"
+        },
+        "http://www.w3.org/ns/sosa/observes" : {
+            "@id": "https://ci.mines-stetienne.fr/kg/itmfactory/vl10/M1#this"
+        },
+        "http://www.w3.org/2000/01/rdf-schema/comment": "Motor for conveyor belt on VL10 machine of the IT'm factory."
+    },
+
+    {
+        "@id" : "https://ci.mines-stetienne.fr/kg/itmfactory/vl10/M2",
+        "@type" : [ "http://www.productontology.org/doc/Stepper_motor, onto:Motor", "http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AKE143002-tax"],
+        "https://www.w3.org/2000/01/rdf-schema#/label": "E stepper motor with encoder",
+        "https://schema.org/manufacturer": "igus",
+        "http://purl.org/dc/terms/identifier": {
+            "@id": "https://www.igus.com/product?artNr=MOT-AN-S-060-020-056-M-C-AAAC"
+        },
+        "http://www.w3.org/ns/sosa/observes" : {
+            "@id": "https://ci.mines-stetienne.fr/kg/itmfactory/vl10/M2#this"
+        },
+        "http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/hierarchyCode": "27022105",
+        "http://www.w3.org/2000/01/rdf-schema/comment": "Motor for X-Axis moving on VL10 machine of the IT'm factory."
+    },
+
+    {
+        "@id" : "https://ci.mines-stetienne.fr/kg/itmfactory/vl10/M4",
+        "@type" : [ "http://www.productontology.org/doc/Stepper_motor, onto:Motor", "http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AKE143002-tax"],
+        "https://www.w3.org/2000/01/rdf-schema#/label": "E stepper motor with encoder",
+        "https://schema.org/manufacturer": "igus",
+        "http://purl.org/dc/terms/identifier": {
+            "@id": "https://www.igus.com/product?artNr=MOT-AN-S-060-020-056-M-C-AAAC"
+        },
+        "http://www.w3.org/ns/sosa/observes" : {
+            "@id": "https://ci.mines-stetienne.fr/kg/itmfactory/vl10/M4#this"
+        },
+        "http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/hierarchyCode": "27022105",
+        "http://www.w3.org/2000/01/rdf-schema/comment": "Motor for Z-Axis moving on VL10 machine of the IT'm factory."
+    },
+
+    {
+        "@id" : "https://ci.mines-stetienne.fr/kg/itmfactory/vl10/S3",
+        "@type" : [ "http://www.productontology.org/doc/Emergency", "http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AAW867004-tax"],
+        "https://www.w3.org/2000/01/rdf-schema#/label": "emergency stop button",
+        "https://schema.org/manufacturer": "Schneider Electric",
+        "http://purl.org/dc/terms/identifier": {
+            "@id": "https://www.se.com/fr/fr/product/XB5AS8445/harmony-xb5-bouton-arr%C3%AAt-urgence-%C3%B840-pousser-tourner-rouge-1o+1f-vis/"
+        },
+        "http://www.w3.org/ns/sosa/observes" : {
+            "@id": "https://ci.mines-stetienne.fr/kg/itmfactory/vl10/S3#this"
+        },
+        "http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/hierarchyCode": "23010101",
+        "http://www.w3.org/2000/01/rdf-schema/comment": "stops the ongoing actions on VL10 machine of the IT'm factory."
+    }
+]

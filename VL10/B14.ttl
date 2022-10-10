@@ -1,0 +1,34 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix eco: <http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4#> .
+@prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
+@prefix htv: <http://www.w3.org/2011/http#> .
+@prefix js: <https://www.w3.org/2019/wot/json-schema#> .
+@prefix pto: <http://www.productontology.org/id/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix td: <https://www.w3.org/2019/wot/td#> .
+
+<https://ci.mines-stetienne.fr/kg/itmfactory/vl10/B14> a eco:C_AGZ258004,
+        pto:Position_sensor ;
+    rdfs:label "Position_sensor" ;
+    dct:identifier "https://www.sick.com/fr/en/magnetic-cylinder-sensors/position-sensors/mps-t/mps-224tltq0/p/p318150?ff_data=JmZmX2lkPXAzMTgxNTAmZmZfbWFzdGVySWQ9cDMxODE1MCZmZl90aXRsZT1NUFMtMjI0VExUUTAmZmZfcXVlcnk9SU8tTElOSyZmZl9wb3M9MjAmZmZfb3JpZ1Bvcz0yMCZmZl9wYWdlPTEmZmZfcGFnZVNpemU9MjQmZmZfb3JpZ1BhZ2VTaXplPTI0JmZmX3NpbWk9OTQuMA==" ;
+    schema1:manufacture "SICK Sensor Intelligence" ;
+    rdfs:comment "Position Sensors are used to measure linear motion, In vl10 it has venturi with vacuum switch and 2 detection thresholds"@en ;
+    skos:prefLabel "B14" ;
+    sosa:observes "It detects linear motion of the cartecian robot in Y-Axis direction on the VL10 Machine of the IT'm factory."@en ;
+    td:hasPropertyAffordance [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates the status/condiation/position of the Y Axis airlock cylinder on the VL10 Machine of the IT'm factory."@en ;
+            dct:title "Y Axis airlock cylinder status" ;
+            js:readOnly "True" ;
+            js:writeOnly "False" ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget "http://localhost:3001/ns=2;s=Channel_test2.Magasin%20vertical.Ouverture_Pinces" ] ;
+            td:isObservable "False" ;
+            td:name "Ouverture_Pinces" ] .
+

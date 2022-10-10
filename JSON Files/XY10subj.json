@@ -1,0 +1,324 @@
+[
+    {
+        "@id" : "https://ci.mines-stetienne.fr/kg/itmfactory/xy10/B1",
+        "@type" : ["http://www.productontology.org/doc/Photoelectric_sensor", "http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AKP251002-tax"],
+            "http://www.w3.org/2000/01/rdf-schema/label": "Polarized retro-reflective photoelectric sensor",
+            "https://schema.org/manufacturer": "Leuze",
+            "http://purl.org/dc/terms/identifier": {
+                "@id": "https://www.leuze.com/en/usa/products_us/switching_sensors_us/optical_sensors_us/photoelectric_sensors_light_scanners_cubic_us/5_series_us/retro_reflective_photoelectric_sensors_us_2/prk5_us/selector.php?supplier_aid=50128200&grp_id=A1-1-1-1-3-2-1&lang=eng"
+            },
+            "http://www.w3.org/ns/sosa/observes" : {
+                "@id": "https://ci.mines-stetienne.fr/kg/itmfactory/xy10/B1#this"
+            },
+            "http://www.w3.org/2000/01/rdf-schema/comment": "Indicates tray is present in tray gravity buffer on xy10 machine of the IT'm factory."
+    },
+
+    {
+        "@id" : "https://ci.mines-stetienne.fr/kg/itmfactory/xy10/B2",
+        "@type" : [ "http://www.productontology.org/doc/Reed_switch", "http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AAX025004-tax"],
+            "http://www.w3.org/2000/01/rdf-schema/label": "Reed Switch, Direct Mounting, Grommet, In-line",
+            "https://schema.org/manufacturer": "SMC",
+            "http://purl.org/dc/terms/identifier": {
+                "@id": "https://www.smc.eu/en-eu/products/d-a90-a93-a96-reed-switch-direct-mounting-grommet-in-line~75484~cfg?partNumber=D-A93"
+            },
+            "http://www.w3.org/ns/sosa/observes" : {
+                "@id": "https://ci.mines-stetienne.fr/kg/itmfactory/xy10/B2#this"
+            },
+            "http://www.w3.org/2000/01/rdf-schema/comment": "Indicates the contact is closed and it is not picking the tray from tray gravity on xy10 machine of the IT'm factory."
+    },
+
+    {
+        "@id" : "https://ci.mines-stetienne.fr/kg/itmfactory/xy10/B3",
+        "@type" : [ "http://www.productontology.org/doc/Reed_switch", "http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AAX025004-tax"],
+            "http://www.w3.org/2000/01/rdf-schema/label": "Reed Switch, Direct Mounting, Grommet, In-line",
+            "https://schema.org/manufacturer": "SMC",
+            "http://purl.org/dc/terms/identifier": {
+                "@id": "https://www.smc.eu/en-eu/products/d-a90-a93-a96-reed-switch-direct-mounting-grommet-in-line~75484~cfg?partNumber=D-A93"
+            },
+            "http://www.w3.org/ns/sosa/observes" : {
+                "@id": "https://ci.mines-stetienne.fr/kg/itmfactory/xy10/B3#this"
+            },
+            "http://www.w3.org/2000/01/rdf-schema/comment": "Indicates the contact(Bar) is opened and it is picking the tray from tray gravity on xy10 machine of the IT'm factory."
+    },
+
+    {
+        "@id" : "https://ci.mines-stetienne.fr/kg/itmfactory/xy10/B4",
+        "@type" : [ "http://www.productontology.org/doc/Photoelectric_sensor", "http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AKP251002-tax"],
+            "http://www.w3.org/2000/01/rdf-schema/label": "Polarized retro-reflective photoelectric sensor",
+            "https://schema.org/manufacturer": "Leuze",
+            "http://purl.org/dc/terms/identifier": {
+                "@id": "https://www.leuze.com/en/usa/products_us/switching_sensors_us/optical_sensors_us/photoelectric_sensors_light_scanners_cubic_us/5_series_us/retro_reflective_photoelectric_sensors_us_2/prk5_us/selector.php?supplier_aid=50128200&grp_id=A1-1-1-1-3-2-1&lang=eng"
+            },
+            "http://www.w3.org/ns/sosa/observes" : {
+                "@id": "https://ci.mines-stetienne.fr/kg/itmfactory/xy10/B4#this"
+            },
+            "http://www.w3.org/2000/01/rdf-schema/comment": "Indicates tray is present at picking position on xy10 machine of the IT'm factory."
+    },
+
+    {
+        "@id" : "https://ci.mines-stetienne.fr/kg/itmfactory/xy10/conveyor/B6",
+        "@type" : [ "http://www.productontology.org/doc/Photoelectric_sensor", "http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AKP251002-tax"],
+            "http://www.w3.org/2000/01/rdf-schema/label": "Polarized retro-reflective photoelectric sensor",
+            "https://schema.org/manufacturer": "Leuze",
+            "http://purl.org/dc/terms/identifier": {
+                "@id": "https://www.leuze.com/en/usa/products_us/switching_sensors_us/optical_sensors_us/photoelectric_sensors_light_scanners_cubic_us/5_series_us/retro_reflective_photoelectric_sensors_us_2/prk5_us/selector.php?supplier_aid=50128200&grp_id=A1-1-1-1-3-2-1&lang=eng"
+            },
+            "http://www.w3.org/ns/sosa/observes" : {
+                "@id": "https://ci.mines-stetienne.fr/kg/itmfactory/xy10/B6#this"
+            },
+            "http://www.w3.org/2000/01/rdf-schema/comment": "Indicates tray is present at exit position with filled bottles on xy10 machine of the IT'm factory."
+
+    },
+
+    {
+        "@id" : "https://ci.mines-stetienne.fr/kg/itmfactory/xy10/conveyor/B7",
+        "@type" : ["http://www.productontology.org/doc/Photoelectric_sensor", "http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AKP251002-tax"],
+            "http://www.w3.org/2000/01/rdf-schema/label": "Polarized retro-reflective photoelectric sensor",
+            "https://schema.org/manufacturer": "Leuze",
+            "http://purl.org/dc/terms/identifier": {
+                "@id": "https://www.leuze.com/en/usa/products_us/switching_sensors_us/optical_sensors_us/photoelectric_sensors_light_scanners_cubic_us/5_series_us/retro_reflective_photoelectric_sensors_us_2/prk5_us/selector.php?supplier_aid=50128200&grp_id=A1-1-1-1-3-2-1&lang=eng"
+            },
+            "http://www.w3.org/ns/sosa/observes" : {
+                "@id": "https://ci.mines-stetienne.fr/kg/itmfactory/xy10/B7#this"
+            },
+            "http://www.w3.org/2000/01/rdf-schema/comment": "Indicates tray is present at drop off position to fill bottles in that on xy10 machine of the IT'm factory."
+    },
+
+    {
+        "@id" : "https://ci.mines-stetienne.fr/kg/itmfactory/xy10/B8", 
+        "@type" : [ "http://www.productontology.org/doc/Photoelectric_sensor", "http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AKP251002-tax"],
+            "http://www.w3.org/2000/01/rdf-schema/label": "Polarized retro-reflective photoelectric sensor",
+            "https://schema.org/manufacturer": "Leuze",
+            "http://purl.org/dc/terms/identifier": {
+                "@id": "https://www.leuze.com/en/usa/products_us/switching_sensors_us/optical_sensors_us/photoelectric_sensors_light_scanners_cubic_us/5_series_us/retro_reflective_photoelectric_sensors_us_2/prk5_us/selector.php?supplier_aid=50128200&grp_id=A1-1-1-1-3-2-1&lang=eng"
+            },
+            "http://www.w3.org/ns/sosa/observes" : {
+                "@id": "https://ci.mines-stetienne.fr/kg/itmfactory/xy10/B8#this"
+            },
+            "http://www.w3.org/2000/01/rdf-schema/comment": "Indicates pot1 is present at pickup position to keep it in tray at the drop off position on xy10 machine of the IT'm factory."
+    },
+
+    {
+        "@id" : "https://ci.mines-stetienne.fr/kg/itmfactory/xy10/B9",
+        "@type" : [ "http://www.productontology.org/doc/Photoelectric_sensor", "http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AKP251002-tax"],
+            "http://www.w3.org/2000/01/rdf-schema/label": "Polarized retro-reflective photoelectric sensor",
+            "https://schema.org/manufacturer": "Leuze",
+            "http://purl.org/dc/terms/identifier": {
+                "@id": "https://www.leuze.com/en/usa/products_us/switching_sensors_us/optical_sensors_us/photoelectric_sensors_light_scanners_cubic_us/5_series_us/retro_reflective_photoelectric_sensors_us_2/prk5_us/selector.php?supplier_aid=50128200&grp_id=A1-1-1-1-3-2-1&lang=eng"
+            },
+            "http://www.w3.org/ns/sosa/observes" : {
+                "@id": "https://ci.mines-stetienne.fr/kg/itmfactory/xy10/B9#this"
+            },
+            "http://www.w3.org/2000/01/rdf-schema/comment": "Indicates pot2 is present at pickup position to keep it in tray at the drop off position on xy10 machine of the IT'm factory."
+    },
+
+    {
+        "@id" : "https://ci.mines-stetienne.fr/kg/itmfactory/xy10/conveyor/B11",
+        "@type" : [ "http://www.productontology.org/doc/Photoelectric_sensor", "http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AKP251002-tax"],
+            "http://www.w3.org/2000/01/rdf-schema/label": "Polarized retro-reflective photoelectric sensor",
+            "https://schema.org/manufacturer": "Leuze",
+            "http://purl.org/dc/terms/identifier": {
+                "@id": "https://www.leuze.com/en/usa/products_us/switching_sensors_us/optical_sensors_us/photoelectric_sensors_light_scanners_cubic_us/5_series_us/retro_reflective_photoelectric_sensors_us_2/prk5_us/selector.php?supplier_aid=50128200&grp_id=A1-1-1-1-3-2-1&lang=eng"
+            },
+            "http://www.w3.org/ns/sosa/observes" : {
+                "@id": "https://ci.mines-stetienne.fr/kg/itmfactory/xy10/B11#this"
+            },
+            "http://www.w3.org/2000/01/rdf-schema/comment": "Indicates pot is present at head/starting position on conveyor belt on xy10 machine of the IT'm factory."
+    },
+
+    {
+        "@id" : "https://ci.mines-stetienne.fr/kg/itmfactory/xy10/B12",
+        "@type" : [ "http://www.productontology.org/doc/Proximity_sensor", "http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AAX025004-tax"],
+            "http://www.w3.org/2000/01/rdf-schema/label": "E proximity Switch type Sensor",
+            "https://schema.org/manufacturer": "igus",
+            "http://purl.org/dc/terms/identifier": {
+                "@id": "https://www.igus.com/product?artNr=INI-AB-I-025-B-AA"
+            },
+            "http://www.w3.org/ns/sosa/observes" : {
+                "@id": "https://ci.mines-stetienne.fr/kg/itmfactory/xy10/B12#this"
+            },
+            "http://www.w3.org/2000/01/rdf-schema/comment": "Indicates the status of the Cartesian robot X axis on XY10 machine of the IT'm factory at the end limit point."
+    },
+
+    {
+        "@id" : "https://ci.mines-stetienne.fr/kg/itmfactory/xy10/B14",
+        "@type" : [ "http://www.productontology.org/doc/Vacuum_pump", "http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AKL924002-tax"],
+            "http://www.w3.org/2000/01/rdf-schema/label": "Vacuum Unit - Ejector System/ Vacuum Pump System",
+            "https://schema.org/manufacturer": "SMC",
+            "http://purl.org/dc/terms/identifier": {
+                "@id": "https://www.smc.eu/en-eu/products/zk2-a~164877~nav?productId=164879"
+            },
+            "http://www.w3.org/ns/sosa/observes" : {
+                "@id": "https://ci.mines-stetienne.fr/kg/itmfactory/xy10/B14#this"
+            },
+            "http://www.w3.org/2000/01/rdf-schema/comment": "Indicates vaccum is providing to graps the items on xy10 machine of the IT'm factory."
+    },
+
+    {
+        "@id" : "https://ci.mines-stetienne.fr/kg/itmfactory/xy10/B15",
+        "@type" : [ "http://www.productontology.org/doc/Proximity_sensor", "http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AGZ377003-tax"],
+            "http://www.w3.org/2000/01/rdf-schema/label": "E proximity Switch type Sensor",
+            "https://schema.org/manufacturer": "igus",
+            "http://purl.org/dc/terms/identifier": {
+                "@id": "https://www.igus.com/product?artNr=INI-AB-I-025-B-AA"
+            },
+            "http://www.w3.org/ns/sosa/observes" : {
+                "@id": "https://ci.mines-stetienne.fr/kg/itmfactory/xy10/B15#this"
+            },
+            "http://www.w3.org/2000/01/rdf-schema/comment": "Indicates the status of the Cartesian robot  X axis on XY10 machine of the IT'm factory at the front limit point."
+    },
+
+    {
+        "@id" : "https://ci.mines-stetienne.fr/kg/itmfactory/xy10/B16",
+        "@type" : [ "http://www.productontology.org/doc/Proximity_sensor", "http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AGZ377003-tax"],
+            "http://www.w3.org/2000/01/rdf-schema/label": "E proximity Switch type Sensor",
+            "https://schema.org/manufacturer": "igus",
+            "http://purl.org/dc/terms/identifier": {
+                "@id": "https://www.igus.com/product?artNr=INI-AB-I-025-B-AA"
+            },
+            "http://www.w3.org/ns/sosa/observes" : {
+                "@id": "https://ci.mines-stetienne.fr/kg/itmfactory/xy10/B16#this"
+            },
+            "http://www.w3.org/2000/01/rdf-schema/comment": "Indicates the status of the Cartesian robot Y axis on XY10 machine of the IT'm factory at the end limit point."
+    },
+
+    {
+        "@id" : "https://ci.mines-stetienne.fr/kg/itmfactory/xy10/B17",
+        "@type" : [ "http://www.productontology.org/doc/Proximity_sensor", "http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AGZ377003-tax"],
+            "http://www.w3.org/2000/01/rdf-schema/label": "E proximity Switch type Sensor",
+            "https://schema.org/manufacturer": "igus",
+            "http://purl.org/dc/terms/identifier": {
+                "@id": "https://www.igus.com/product?artNr=INI-AB-I-025-B-AA"
+            },
+            "http://www.w3.org/ns/sosa/observes" : {
+                "@id": "https://ci.mines-stetienne.fr/kg/itmfactory/xy10/B17#this"
+            },
+            "http://www.w3.org/2000/01/rdf-schema/comment": "Indicates the status of the Cartesian robot  Y axis on XY10 machine of the IT'm factory at the front limit point."
+    },
+
+    {
+        "@id" : "https://ci.mines-stetienne.fr/kg/itmfactory/xy10/B18",
+        "@type" : [ "http://www.productontology.org/doc/Proximity_sensor", "http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AGZ377003-tax"],
+            "http://www.w3.org/2000/01/rdf-schema/label": "E proximity Switch type Sensor",
+            "https://schema.org/manufacturer": "igus",
+            "http://purl.org/dc/terms/identifier": {
+                "@id": "https://www.igus.com/product?artNr=INI-AB-I-025-B-AA"
+            },
+            "http://www.w3.org/ns/sosa/observes" : {
+                "@id": "https://ci.mines-stetienne.fr/kg/itmfactory/xy10/B18#this"
+            },
+            "http://www.w3.org/2000/01/rdf-schema/comment": "Indicates the status of the Cartesian robot  Z axis on XY10 machine of the IT'm factory at the top limit point."
+    },
+
+    {
+        "@id" : "https://ci.mines-stetienne.fr/kg/itmfactory/xy10/B19",
+        "@type" : [ "http://www.productontology.org/doc/Proximity_sensor", "http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AGZ377003-tax"],
+            "http://www.w3.org/2000/01/rdf-schema/label": "E proximity Switch type Sensor",
+            "https://schema.org/manufacturer": "igus",
+            "http://purl.org/dc/terms/identifier": {
+                "@id": "https://www.igus.com/product?artNr=INI-AB-I-025-B-AA"
+            },
+            "http://www.w3.org/ns/sosa/observes" : {
+                "@id": "https://ci.mines-stetienne.fr/kg/itmfactory/xy10/B19#this"
+            },
+            "http://www.w3.org/2000/01/rdf-schema/comment": "Indicates the status of the Cartesian robot Z axis on XY10 machine of the IT'm factory at the bottom limit point."
+    },
+
+    {
+        "@id" : "https://ci.mines-stetienne.fr/kg/itmfactory/xy10/B20",
+        "@type" : [ "http://www.productontology.org/doc/Proximity_sensor", "http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AGZ377003-tax"],
+            "http://www.w3.org/2000/01/rdf-schema/label": "E proximity Switch type Sensor",
+            "https://schema.org/manufacturer": "igus",
+            "http://purl.org/dc/terms/identifier": {
+                "@id": "https://www.igus.com/product?artNr=INI-AB-I-025-A-AA"
+            },
+            "http://www.w3.org/ns/sosa/observes" : {
+                "@id": "https://ci.mines-stetienne.fr/kg/itmfactory/xy10/B20#this"
+            },
+            "http://www.w3.org/2000/01/rdf-schema/comment": "Indicates the Cartesian robot belt is reaches to the intial/ideal position on the X axis on XY10 machine of the IT'm factory."
+    },
+
+    {
+        "@id" : "https://ci.mines-stetienne.fr/kg/itmfactory/xy10/B21",
+        "@type" : [ "http://www.productontology.org/doc/Proximity_sensor", "http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AGZ377003-tax"],
+            "http://www.w3.org/2000/01/rdf-schema/label": "E proximity Switch type Sensor",
+            "https://schema.org/manufacturer": "igus",
+            "http://purl.org/dc/terms/identifier": {
+                "@id": "https://www.igus.com/product?artNr=INI-AB-I-025-A-AA"
+            },
+            "http://www.w3.org/ns/sosa/observes" : {
+                "@id": "https://ci.mines-stetienne.fr/kg/itmfactory/xy10/B21#this"
+            },
+            "http://www.w3.org/2000/01/rdf-schema/comment": "Indicates the Cartesian robot belt is reaches to the intial position on the Y axis on XY10 machine of the IT'm factory."
+    },
+
+    {
+        "@id" : "https://ci.mines-stetienne.fr/kg/itmfactory/xy10/B22",
+        "@type" : [ "http://www.productontology.org/doc/Proximity_sensor", "http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AGZ377003-tax"],
+            "http://www.w3.org/2000/01/rdf-schema/label": "E proximity Switch type Sensor",
+            "https://schema.org/manufacturer": "igus",
+            "http://purl.org/dc/terms/identifier": {
+                "@id": "https://www.igus.com/product?artNr=INI-AB-I-025-A-AA"
+            },
+            "http://www.w3.org/ns/sosa/observes" : {
+                "@id": "https://ci.mines-stetienne.fr/kg/itmfactory/xy10/B22#this"
+            },
+            "http://www.w3.org/2000/01/rdf-schema/comment": "Indicates the Cartesian robot belt is reaches to the intial position on the Z axis on XY10 machine of the IT'm factory."
+    },
+
+    {
+        "@id" : "https://ci.mines-stetienne.fr/kg/itmfactory/xy10/conveyor/M1",
+        "@type" : [ "http://www.productontology.org/doc/Engine, http://www.productontology.org/doc/Gear", "http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AKE175002-tax"],
+            "http://www.w3.org/2000/01/rdf-schema/label": "Gear Motor",
+            "https://schema.org/manufacturer": "TRANSTECNO",
+            "http://purl.org/dc/terms/identifier": {
+                "@id": "https://www.maxodeals.com/mdenglish/transtecno-tcm030-0220-ttn-ts6324b14-used-ump"
+            },
+            "http://www.w3.org/ns/sosa/observes" : {
+                "@id": "https://ci.mines-stetienne.fr/kg/itmfactory/xy10/M1#this"
+            },
+            "http://www.w3.org/2000/01/rdf-schema/comment": "It is used to read and write the speed of the conveyor belt on the XY10 Machine of the IT'm factory."
+    },
+    
+    {
+        "@id" : "https://ci.mines-stetienne.fr/kg/itmfactory/xy10/M2",
+        "@type" :[ "http://www.productontology.org/doc/Stepper_motor", "http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AKE143002-tax"],
+            "http://www.w3.org/2000/01/rdf-schema/label": "E stepper motor with encoder",
+            "https://schema.org/manufacturer": "igus",
+            "http://purl.org/dc/terms/identifier": {
+                "@id": "https://www.igus.com/product?artNr=MOT-AN-S-060-020-056-M-C-AAAC"
+            },
+            "http://www.w3.org/ns/sosa/observes" : {
+                "@id": "https://ci.mines-stetienne.fr/kg/itmfactory/xy10/M2#this"
+            },
+            "http://www.w3.org/2000/01/rdf-schema/comment": "It is used to read and write the speed of the X Axis on the XY10 Machine of the IT'm factory."
+    },
+
+    {
+        "@id" : "https://ci.mines-stetienne.fr/kg/itmfactory/xy10/M3",
+        "@type" :[ "http://www.productontology.org/doc/Stepper_motor", "http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AKE143002-tax"],
+            "http://www.w3.org/2000/01/rdf-schema/label": "E stepper motor with encoder",
+            "https://schema.org/manufacturer": "igus",
+            "http://purl.org/dc/terms/identifier": {
+                "@id": "https://www.igus.com/product?artNr=MOT-AN-S-060-020-056-M-C-AAAC"
+            },
+            "http://www.w3.org/ns/sosa/observes" : {
+                "@id": "https://ci.mines-stetienne.fr/kg/itmfactory/xy10/M3#this"
+            },
+            "http://www.w3.org/2000/01/rdf-schema/comment": "It is used to read and write the speed of the Y Axis on the XY10 Machine of the IT'm factory."
+    },
+
+    {
+        "@id" : "https://ci.mines-stetienne.fr/kg/itmfactory/xy10/M4",
+        "@type" :[ "http://www.productontology.org/doc/Stepper_motor", "http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AKE143002-tax"],
+            "http://www.w3.org/2000/01/rdf-schema/label": "E stepper motor with encoder",
+            "https://schema.org/manufacturer": "igus",
+            "http://purl.org/dc/terms/identifier": {
+                "@id": "https://www.igus.com/product?artNr=MOT-AN-S-060-020-056-M-C-AAAC"
+            },
+            "http://www.w3.org/ns/sosa/observes" : {
+                "@id": "https://ci.mines-stetienne.fr/kg/itmfactory/xy10/M4#this"
+            },
+            "http://www.w3.org/2000/01/rdf-schema/comment": "It is used to read and write the speed of the Z Axis on the XY10 Machine of the IT'm factory."
+    }
+]

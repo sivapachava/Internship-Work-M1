@@ -1,0 +1,423 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
+@prefix htv: <http://www.w3.org/2011/http#> .
+@prefix js: <https://www.w3.org/2019/wot/json-schema#> .
+@prefix onto: <https://ci.mines-stetienne.fr/kg/ontology#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix td: <https://www.w3.org/2019/wot/td#> .
+@prefix wotsec: <https://www.w3.org/2019/wot/security#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://ci.mines-stetienne.fr/kg/itmfactory/dx10/fullgraph> a <http://www.productontology.org/id/Filler_(packaging)>,
+        sosa:Platform,
+        onto:DosaxeDX10,
+        td:thing ;
+    rdfs:label "Dosaxe DX10"@en ;
+    dct:description "DX10 filling workshop with a Cartesian robot, a filler (with a magnetic valve) attached to the Cartesian robot and a conveyor belt. The machine is configured such that: 1) once the optical sensor at the start of the belt detects an item, the magnetic valve of the filler opens and the Cartesian robot starts to move along the X axis (at the speed of the belt) above the item. 2) Once a preconfigured amount of product has been poured by the filler, the valve closes and the robot returns to its initial X coordinate at maximum speed while the item keeps moving towards the end of the conveyor." ;
+    dct:title "fillingWorkshop" ;
+    rdfs:comment "Brushless axis dosing machine"@en ;
+    td:hasActionAffordance [ a onto:StopInEmergencyAction,
+                td:ActionAffordance ;
+            dct:description "turns off all active components of the machine" ;
+            dct:title "Press Emergency Stop" ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "POST" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:invokeAction ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.DX10.pressEmergencyStop> ] ;
+            td:isIdempotent false ;
+            td:isSafe false ;
+            td:name "I0.0" ] ;
+    td:hasPropertyAffordance [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates Measurements Visualization button is able to visualize on DX10 machine of the IT'm factory." ;
+            dct:title "Measurements Visualization" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.DX10.Visu_Mesures> ] ;
+            td:isObservable false ;
+            td:name "M6.1" ],
+        [ a js:NumberSchema,
+                td:PropertyAffordance ;
+            dct:description "It counts the number of working hours of the machine in secondes on the DX10 of the IT'm factory. " ;
+            dct:title "Time counter" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.DX10.Compteur_Horaire> ] ;
+            td:isObservable false ;
+            td:name "MD258" ],
+        [ a js:NumberSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates jog speed on DX10 machine of the IT'm factory." ;
+            dct:title "Jog Speed" ;
+            js:readOnly false ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty,
+                        td:writeProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.DX10.Vitesse%20Jog> ] ;
+            td:isObservable false ;
+            td:name "MD70" ],
+        [ a js:NumberSchema,
+                td:PropertyAffordance ;
+            dct:description "It is used to read and write the valve opening distance value (diameter value) on the DX10 Machine of the IT'm factory." ;
+            dct:title "hatch_opening_2" ;
+            js:readOnly false ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty,
+                        td:writeProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.DX10.hatch_opening_2> ] ;
+            td:isObservable false ;
+            td:name "MD52" ],
+        [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates tank reaches to ideal/intial position on backward direction on DX10 machine of the IT'm factory." ;
+            dct:title "Hopper Position" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.DX10.Axis_Fill_Pulse> ] ;
+            td:isObservable false ;
+            td:name "Q0.0" ],
+        [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates movable part (hopper) reaches to ideal/intial position on DX10 machine of the IT'm factory." ;
+            dct:title "Hopper Position" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.DX10.Came_de_prise_d'origine> ] ;
+            td:isObservable false ;
+            td:name "I0.4" ],
+        [ a js:NumberSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates the number of pots it has filled with product on DX10 machine of the IT'm factory." ;
+            dct:title "Counter pots" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.DX10.Counter_pots> ] ;
+            td:isObservable false ;
+            td:name "MW250" ],
+        [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates tank reaches to ideal/intial position on forward direction on DX10 machine of the IT'm factory." ;
+            dct:title "Hopper Position" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.DX10.Axe_Remplissage_Sens> ] ;
+            td:isObservable false ;
+            td:name "Q0.1" ],
+        [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates the intialisation condiations for Axis Status are correct on DX10 machine of the IT'm factory." ;
+            dct:title "Axis under power" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.DX10.Axe%20sous%20puissance> ] ;
+            td:isObservable false ;
+            td:name "I0.1" ],
+        [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates Product counter is reset on DX10 machine of the IT'm factory." ;
+            dct:title "Product counter reset" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.DX10.RAZ%20Compteur%20produits> ] ;
+            td:isObservable false ;
+            td:name "M34.4" ],
+        [ a js:NumberSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates the travelling distance for hopper along with bottle to fill the product on DX10 machine of the IT'm factory." ;
+            dct:title "filling_distance_instruction" ;
+            js:readOnly false ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty,
+                        td:writeProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.DX10.filling_distance_instruction> ] ;
+            td:isObservable false ;
+            td:name "MD200" ],
+        [ a js:NumberSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates product filling time on DX10 machine of the IT'm factory." ;
+            dct:title "Filling Time" ;
+            js:readOnly false ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty,
+                        td:writeProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.DX10.Temps%20Remplissage> ] ;
+            td:isObservable false ;
+            td:name "MD100" ],
+        [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates the bottle is present at the head of the conveyor belt on DX10 machine of the IT'm factory." ;
+            dct:title "front_pot_presence" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.DX10.front_pot_presence> ] ;
+            td:isObservable false ;
+            td:name "M300.0" ],
+        [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates pot is presented at below the hopper on DX10 machine of the IT'm factory." ;
+            dct:title "Presence pot" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.DX10.Presence%20pot> ] ;
+            td:isObservable false ;
+            td:name "I0.3" ],
+        [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates the machine needs Intialization validation on DX10 machine of the IT'm factory." ;
+            dct:title "Mise sous puissance" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.DX10.Mise%20sous%20puissance> ] ;
+            td:isObservable false ;
+            td:name "Q0.2" ],
+        [ a js:NumberSchema,
+                td:PropertyAffordance ;
+            dct:description "It is used to reads the speed of the movable part (hopper) on the DX10 Machine of the IT'm factory." ;
+            dct:title "Hopper Speed " ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.DX10.Axe_Remplissage_Position_int> ] ;
+            td:isObservable false ;
+            td:name "MW220" ],
+        [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates Hour counters is reset on DX10 machine of the IT'm factory." ;
+            dct:title "Reset Hour counters" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.DX10.RAZ%20Compteurs%20Horaire> ] ;
+            td:isObservable false ;
+            td:name "M34.6" ],
+        [ a js:NumberSchema,
+                td:PropertyAffordance ;
+            dct:description "It is used to read and write the speed of the conveyor belt on the DX10 Machine of the IT'm factory." ;
+            dct:title "Conveyor Speed" ;
+            js:readOnly false ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty,
+                        td:writeProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.DX10.conveyor_speed> ] ;
+            td:isObservable false ;
+            td:name "DB4.DBD2" ],
+        [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates the amount of product in the hopper on DX10 machine of the IT'm factory." ;
+            dct:title "Presence Produit" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.DX10.Presence%20Produit> ] ;
+            td:isObservable false ;
+            td:name "I0.5" ],
+        [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates hopper is moving in backward direction on DX10 machine of the IT'm factory." ;
+            dct:title "Negative direction axis" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.DX10.Axe%20sens%20negatif> ] ;
+            td:isObservable false ;
+            td:name "M4.0" ],
+        [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates bottle reaches to end of the conveyor belt and it detects the product presence in the bottle on DX10 machine of the IT'm factory." ;
+            dct:title "Downstream Accumulation " ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.DX10.Accumulation%20Aval%20B5> ] ;
+            td:isObservable false ;
+            td:name "I0.6" ],
+        [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates Intialisation Visualization button is able to visualize on DX10 machine of the IT'm factory." ;
+            dct:title "Intialisation Visualization" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.DX10.BP_initialisation> ] ;
+            td:isObservable false ;
+            td:name "M5.2" ],
+        [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "It is used to stop DX10 machine of the IT'm factory." ;
+            dct:title "Stop Button" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.DX10.Stop> ] ;
+            td:isObservable false ;
+            td:name "M2.0" ],
+        [ a js:NumberSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates driving stage on DX10 machine of the IT'm factory." ;
+            dct:title "Driving stage" ;
+            js:readOnly false ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty,
+                        td:writeProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.DX10.Etape_conduite> ] ;
+            td:isObservable false ;
+            td:name "MW10" ],
+        [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates conveyor belt has paused by downstream accumulation presence on DX10 machine of the IT'm factory." ;
+            dct:title "Pause Indication" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.DX10.Pause> ] ;
+            td:isObservable false ;
+            td:name "M310.2" ],
+        [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates machine condition of  DX10 of the IT'm factory." ;
+            dct:title "Green verina" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.DX10.Verine%20Verte> ] ;
+            td:isObservable false ;
+            td:name "Q0.4" ],
+        [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates Stop Visualization button is able to visualize on DX10 machine of the IT'm factory." ;
+            dct:title "Stop Visualization" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.DX10.BP_stop> ] ;
+            td:isObservable false ;
+            td:name "M5.4" ],
+        [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates Start Visualization button is able to visualize on DX10 machine of the IT'm factory." ;
+            dct:title "Start Visualization" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.DX10.BP_start> ] ;
+            td:isObservable false ;
+            td:name "M5.0" ],
+        [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "It is used to reset DX10 machine from default errors." ;
+            dct:title "Reset Button" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.DX10.KM1> ] ;
+            td:isObservable false ;
+            td:name "I0.0" ],
+        [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates the hopper is empty (no more product ) on DX10 machine of the IT'm factory." ;
+            dct:title "Set_Manque_Produit" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.DX10.Set_Manque_Produit> ] ;
+            td:isObservable false ;
+            td:name "M6.6" ] ;
+    td:hasSecurityConfiguration [ a wotsec:BasicSecurityScheme ] .
+

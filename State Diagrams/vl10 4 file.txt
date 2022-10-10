@@ -1,0 +1,22 @@
+@startuml
+
+state fork_state <<fork>>
+state c <<choice>>
+
+[*] --> fork_state
+fork_state -down-> c
+c --> ConveyorIdle : stop/ConveyorSpeed == 0
+c --> CoveyorInMovement : move/ConveyorSpeed > 0
+ConveyorIdle --> fork_state
+CoveyorInMovement --> fork_state
+
+fork_state -left->WaitingForOperation : WriteProperty(CoveyorSpeed,Speed)
+WaitingForOperation --> MovingItem : InvokeAction(MovingItem)
+state MovingItem{
+[*] --> MovetoNextWorkshop : Downstream == True
+}
+
+WaitingForOperation -right-> [*]
+WaitingForOperation -up-> fork_state
+
+@enduml

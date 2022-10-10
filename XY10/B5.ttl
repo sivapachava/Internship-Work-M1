@@ -1,0 +1,34 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix eco: <http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4#> .
+@prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
+@prefix htv: <http://www.w3.org/2011/http#> .
+@prefix js: <https://www.w3.org/2019/wot/json-schema#> .
+@prefix pto: <http://www.productontology.org/id/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix td: <https://www.w3.org/2019/wot/td#> .
+
+<https://ci.mines-stetienne.fr/kg/itmfactory/xy10/B5> a eco:C_AKE702002,
+        pto:Connecting_rod ;
+    dct:identifier "https://www.smc.eu/en-eu/products/c-d-qm-compact-cylinder-guide-rod-type~34304~cfg?partNumber=CDQMA32TF-40" ;
+    schema1:manufacture "SMC" ;
+    rdfs:Label "Guide Rod Type Compact Cylinder" ;
+    rdfs:comment "It is a single-acting cylinder and compressed air is supplied to only one side of the clamp"@en ;
+    skos:prefLabel "B5" ;
+    sosa:observes "Indicates tray presence at air lock cylinder on XY10 machine of the IT'm factory."@en ;
+    td:hasPropertyAffordance [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates the tray is present at the airlock cylinder on the conveyor belt on XY10 machine of the IT'm factory. Normally the air lock is in off and the status is true, if the tray reaches to airlock place and at that time one more tray is present at the downstream of the conveyor then air lock is on and the status is false."@en ;
+            dct:title "cylinder reentry" ;
+            js:readOnly "True" ;
+            js:writeOnly "False" ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget "https://ci.mines-stetienne.fr/simu/storageRack/properties/Verin_Barq_Rentre_B5" ] ;
+            td:isObservable "False" ;
+            td:name "Verin_Barq_Rentre_B5" ] .
+

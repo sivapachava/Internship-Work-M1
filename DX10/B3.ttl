@@ -1,0 +1,34 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
+@prefix htv: <http://www.w3.org/2011/http#> .
+@prefix js: <https://www.w3.org/2019/wot/json-schema#> .
+@prefix onto: <https://ci.mines-stetienne.fr/kg/ontology#> .
+@prefix pto: <http://www.productontology.org/id/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix td: <https://www.w3.org/2019/wot/td#> .
+
+<https://ci.mines-stetienne.fr/kg/itmfactory/dx10/B3> a pto:Sensor ;
+    dct:identifier "https://www.igus.com/product?artNr=WJ200UM-01-20-LL" ;
+    schema1:manufacture "igus" ;
+    rdfs:Label "sensor with pillow block" ;
+    rdfs:comment "It is used to detect items and open/close the magnetic valve using pillow block"@en ;
+    skos:prefLabel "B3" ;
+    sosa:observes "Indicates bottle reaches under hopper on DX10 machine of the IT'm factory."@en ;
+    td:hasPropertyAffordance [ a onto:ValveStatus,
+                js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates bottle reaches under hopper and opens magnetic valve to fill the product in bottle on DX10 machine of the IT'm factory. Normally the valve is closed and once it detects the bottle then it is open to fill the product in the bottle."@en ;
+            dct:title "Presence pot" ;
+            js:readOnly "True" ;
+            js:writeOnly "False" ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget "https://ci.mines-stetienne.fr/simu/fillingWorkshop/properties/Presencepot" ] ;
+            td:isObservable "False" ;
+            td:name "Presencepot" ] .
+

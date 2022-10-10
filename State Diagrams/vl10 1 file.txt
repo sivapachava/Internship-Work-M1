@@ -1,0 +1,27 @@
+@startuml
+
+
+state c <<choice>>
+state c1 <<choice>>
+state c2 <<choice>>
+[*] -->WaitingforOperation
+
+WaitingforOperation --> c
+c -->Clampmoveforward : downstream I82.0== True
+c -->Clampmovebackward : downstream I82.0 == False
+
+Clampmovebackward -->c1
+c1 -->CartesianRobotMovingToXZ : OutputYAxis Q2.3 == False
+c1 --> CartesianRobotMovingToConveyorPosition : OutputYAxis Q2.3 == True
+
+Clampmoveforward -up-> WaitingforOperation
+CartesianRobotMovingToConveyorPosition -up-> WaitingforOperation
+
+CartesianRobotMovingToXZ -->c2
+c2 --> ReturnYAxisQ2.4 : ZAxisBreakRelease Q2.5 == False
+c2 -->OpenGrippersQ2.1 : ZAxisBreakRelease Q2.5 == True
+
+ReturnYAxisQ2.4 -up-> WaitingforOperation
+OpenGrippersQ2.1 -up-> WaitingforOperation
+WaitingforOperation -right-> [*]
+@enduml

@@ -1,0 +1,35 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix eco: <http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4#> .
+@prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
+@prefix htv: <http://www.w3.org/2011/http#> .
+@prefix js: <https://www.w3.org/2019/wot/json-schema#> .
+@prefix pto: <http://www.productontology.org/id/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix td: <https://www.w3.org/2019/wot/td#> .
+
+<https://ci.mines-stetienne.fr/kg/itmfactory/xy10/B17> a eco:C_AGZ376003,
+        pto:Proximity_sensor,
+        sosa:Sensor ;
+    dct:identifier "https://www.igus.com/product?artNr=INI-AB-I-025-B-AA" ;
+    schema1:manufacturer "igus" ;
+    rdfs:Label "E proximity Switch type Sensor" ;
+    rdfs:comment "Proximity Sensor sensed the presence of nearby objects without any physical contact with the objects"@en ;
+    skos:prefLabel "B17" ;
+    sosa:observes "It indicates belt reaches to front limit point on the Y Axis on XY10 machine of the IT'm factory"@en ;
+    td:hasPropertyAffordance [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates the status of the Y axis on XY10 machine of the IT'm factory at the front limit point. Normally the switch is in close and the status is true, if belt reaches to front limit point then the switch is opened and the status is false."@en ;
+            dct:title "YAxisFrontLimit" ;
+            js:readOnly "True" ;
+            js:writeOnly "False" ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget "https://ci.mines-stetienne.fr/simu/packagingWorkshop/properties/AxeY_Fdc_Avant_B17" ] ;
+            td:isObservable "False" ;
+            td:name "AxeY_Fdc_Avant_B17" ] .
+

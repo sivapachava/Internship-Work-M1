@@ -1,0 +1,800 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
+@prefix htv: <http://www.w3.org/2011/http#> .
+@prefix js: <https://www.w3.org/2019/wot/json-schema#> .
+@prefix onto: <https://ci.mines-stetienne.fr/kg/ontology#> .
+@prefix pto: <http://www.productontology.org/id/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix td: <https://www.w3.org/2019/wot/td#> .
+@prefix wotsec: <https://www.w3.org/2019/wot/security#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://ci.mines-stetienne.fr/kg/itmfactory/vl10/fullgraph> a pto:Automated_storage_and_retrieval_system,
+        sosa:Platform,
+        td:thing ;
+    rdfs:label "vertical dynamic storage rack"@en ;
+    dct:description "VL10 storage rack with a Cartesian robot and a conveyor belt. It can be used as a conveying workshop: The Cartesian robot can be used to move on the XZ-plane, pick up items from the storage rack and place them on the one end of the conveyor belt." ;
+    dct:title "vl10" ;
+    rdfs:comment "The Dynamic Vertical Store system is an automated customer order picking system."@en ;
+    td:hasActionAffordance [ a onto:StopInEmergencyAction,
+                td:ActionAffordance ;
+            dct:description "turns off all active components of the machine" ;
+            dct:title "Press Emergency Stop" ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "POST" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:invokeAction ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.VL10.pressEmergencyStop> ] ;
+            td:isIdempotent false ;
+            td:isSafe false ;
+            td:name "I0.0" ] ;
+    td:hasPropertyAffordance [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates the VL10 Machine has internal error while it is in processing of the IT'm factory." ;
+            dct:title "Green verina" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.VL10.Verine_Verte> ] ;
+            td:isObservable false ;
+            td:name "Q0.7" ],
+        [ a js:NumberSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates amount of air pressure using for graps the bottle on the VL10 of the IT'm factory. " ;
+            dct:title "Air pressure" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.VL10.Pression_Air> ] ;
+            td:isObservable false ;
+            td:name "IW84" ],
+        [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates X Axis has default error on VL10 machine of the IT'm factory." ;
+            dct:title "Faulty X axis" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.VL10.Axe_X_En_Défaut> ] ;
+            td:isObservable false ;
+            td:name "M45.2" ],
+        [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates linear motion of the cartecian robot in Y-Axis direction to graps the bottle on the VL10 Machine of the IT'm factory." ;
+            dct:title "Opening Grippers" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.VL10.Ouverture_Pinces> ] ;
+            td:isObservable false ;
+            td:name "Q2.1" ],
+        [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates the clamp status of the airlock cylinder on the conveyor belt on VL10 machine of the IT'm factory. Normally the airlock is in off and the clamp status is true, if the bottle reaches to airlock place and at that time one more bottle is present at the downstream of the conveyor then air lock is on and the clamp status is false." ;
+            dct:title "Air lock cylinder status" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.VL10.Verin_Sas_Rentree> ] ;
+            td:isObservable false ;
+            td:name "I1.2" ],
+        [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates Conveyor motor default on the VL10 Machine of the IT'm factory." ;
+            dct:title "Conveyor motor default" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.VL10.Defaut%20critique%20moteur%20convoyeur> ] ;
+            td:isObservable false ;
+            td:name "M43.3" ],
+        [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates the status/condiation/position of the conveyor belt drive on the VL10 Machine of the IT'm factory." ;
+            dct:title "Conveyor drive status" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.VL10.defaut_var_convoyeur> ] ;
+            td:isObservable false ;
+            td:name "I1.3" ],
+        [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates the status of the Cartesian robot Z axis reference on VL10 machine of the IT'm factory. Normally the switch is in open and the status is false, if belt reaches to intial/ideal position on the Z-Axis then the switch is closed and the status is true." ;
+            dct:title "Z-Axis reference Status" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.VL10.AxeZ_Ref> ] ;
+            td:isObservable false ;
+            td:name "I0.6" ],
+        [ a js:NumberSchema,
+                td:PropertyAffordance ;
+            dct:description "It reads the current position of  the Cartesian motor on Y Axis on VL10 machine of the IT'm factory. " ;
+            dct:title "Y Axis Current Position " ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.VL10.Position_Actuelle_Y> ] ;
+            td:isObservable false ;
+            td:name "MD264" ],
+        [ a js:NumberSchema,
+                td:PropertyAffordance ;
+            dct:description "It indicates which size bottles ( small pots or large pots ) the cartesian robot has to pick on VL10 machine of the IT'm factory. " ;
+            dct:title "Type of the bottle" ;
+            js:readOnly false ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty,
+                        td:writeProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.VL10.Type%20de%20produits> ] ;
+            td:isObservable false ;
+            td:name "MW106" ],
+        [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates Default Critical Emergency stop on the VL10 Machine of the IT'm factory." ;
+            dct:title "Default Critical Emergency stop " ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.VL10.Defaut%20critique%20Arret%20d'Urgence> ] ;
+            td:isObservable false ;
+            td:name "M43.0" ],
+        [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates Y Axis has default error on VL10 machine of the IT'm factory." ;
+            dct:title "Faulty Y axis" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.VL10.Axe_Y_En_Défaut> ] ;
+            td:isObservable false ;
+            td:name "M54.6" ],
+        [ a js:NumberSchema,
+                td:PropertyAffordance ;
+            dct:description "It counts the number of pots the cartesian robot picked on the VL10 Machine of the IT'm factory." ;
+            dct:title "counting pots" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.VL10.Compteur%20pots> ] ;
+            td:isObservable false ;
+            td:name "MW322" ],
+        [ a js:NumberSchema,
+                td:PropertyAffordance ;
+            dct:description "It indicates which pot (pot1/pot2) the cartesian robot has to pick on storage rack on the VL10 Machine of the IT'm factory." ;
+            dct:title "pot1 pot2 position" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.VL10.Position_Pot1_Pot2> ] ;
+            td:isObservable false ;
+            td:name "MW172" ],
+        [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates the status of the Cartesian robot X axis reference on VL10 machine of the IT'm factory. Normally the switch is in open and the status is false, if belt reaches to intial/ideal position on the X-Axis then the switch is closed and the status is true." ;
+            dct:title "X-Axis reference Status" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.VL10.AxeX_Ref_B3> ] ;
+            td:isObservable false ;
+            td:name "I0.3" ],
+        [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates Manual Mode button is able to visualize on VL10 machine of the IT'm factory." ;
+            dct:title "Visualization of the console Manual Mode button" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.VL10.Visu%20bouton%20Mode%20Manuel_pupitre> ] ;
+            td:isObservable false ;
+            td:name "M80.2" ],
+        [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "It is used to provide vaccum to gripper to hold bottle from storage rack and keep it on conveyor belt on the VL10 Machine of the IT'm factory." ;
+            dct:title "Z Axis belt moving" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.VL10.Reserve> ] ;
+            td:isObservable false ;
+            td:name "Q2.6" ],
+        [ a js:NumberSchema,
+                td:PropertyAffordance ;
+            dct:description "It is used to read the position of the cartesian motor on Z-Axis on the VL10 Machine of the IT'm factory." ;
+            dct:title "Z Axis Velocity Movement" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty,
+                        td:writeProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.VL10.Vitesse_Deplacement_Z> ] ;
+            td:isObservable false ;
+            td:name "MD228" ],
+        [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates the conveyor belt is running on the VL10 of the IT'm factory." ;
+            dct:title "Walking Conveyor" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.VL10.Marche_Conv_U2> ] ;
+            td:isObservable false ;
+            td:name "Q0.6" ],
+        [ a js:NumberSchema,
+                td:PropertyAffordance ;
+            dct:description "Measures the distance to the bottle from Y Axis on the VL10 Machine of the IT'm factory." ;
+            dct:title "Pot distance Measurement" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.VL10.Mesure_distance_Pot> ] ;
+            td:isObservable false ;
+            td:name "IW71" ],
+        [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates Z Axis has default error on VL10 machine of the IT'm factory." ;
+            dct:title "Faulty Z axis" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.VL10.Axe_Z_En_Défaut> ] ;
+            td:isObservable false ;
+            td:name "M55.2" ],
+        [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates the status/condiation/position of the conveyor belt drive on the VL10 Machine of the IT'm factory." ;
+            dct:title "Conveyor drive status" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.VL10.defaut_var_convoyeur> ] ;
+            td:isObservable false ;
+            td:name "I1.3" ],
+        [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates Parametres button is able to visualize on VL10 machine of the IT'm factory." ;
+            dct:title "Visualization of the console Parametres button" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.VL10.Visu%20bouton%20Parametres_pupitre> ] ;
+            td:isObservable false ;
+            td:name "M80.5" ],
+        [ a js:NumberSchema,
+                td:PropertyAffordance ;
+            dct:description "It counts the number of working hours of the machine in secondes on the VL10 of the IT'm factory. " ;
+            dct:title "Hour counter in Secondes" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.VL10.Compteur_Horaire_secondes> ] ;
+            td:isObservable false ;
+            td:name "MD332" ],
+        [ a js:NumberSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates the number of stops on VL10 machine of the IT'm factory. " ;
+            dct:title "Number of stops" ;
+            js:readOnly false ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty,
+                        td:writeProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.VL10.Nombre_arret> ] ;
+            td:isObservable false ;
+            td:name "MW162" ],
+        [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates No fault on X Axis on the VL10 Machine of the IT'm factory." ;
+            dct:title "X Axis Status" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.VL10.AxeX_OK> ] ;
+            td:isObservable false ;
+            td:name "I0.7" ],
+        [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates the bottle is exits/passes from the airlock position of the conveyor belt on the VL10 Machine of the IT'm factory." ;
+            dct:title "Airlock outlet pots" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.VL10.pots_at_airlock> ] ;
+            td:isObservable false ;
+            td:name "I1.5" ],
+        [ a js:NumberSchema,
+                td:PropertyAffordance ;
+            dct:description "It reads the current position of  the Cartesian motor on Z Axis on VL10 machine of the IT'm factory. " ;
+            dct:title "Z Axis Current Position " ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.VL10.Position_Actuelle_Z> ] ;
+            td:isObservable false ;
+            td:name "MD268" ],
+        [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates the status of the Cartesian robot X axis at the front limit point on VL10 machine of the IT'm factory. Normally the switch is in close and the status is true, if the Cartesian robot belt reaches to front limit point then the switch is opened and the status is false." ;
+            dct:title "X-Axis front limit Status" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.VL10.AxeX_Fdc_Avant_B2> ] ;
+            td:isObservable false ;
+            td:name "I0.2" ],
+        [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates the status of the Cartesian robot Z axis at the top limit point on VL10 machine of the IT'm factory. Normally the switch is in close and the status is true, if belt reaches to top limit point then the switch is opened and the status is false." ;
+            dct:title "Z-Axis top limit Status" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.VL10.AxeZ_Fdc_Haut_B5> ] ;
+            td:isObservable false ;
+            td:name "I0.5" ],
+        [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates the Cartesian motor took pot in the second position on tray on VL10 machine of the IT'm factory.  " ;
+            dct:title "Taken Pot2" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.VL10.Pot2_Pris> ] ;
+            td:isObservable false ;
+            td:name "M55.5" ],
+        [ a js:NumberSchema,
+                td:PropertyAffordance ;
+            dct:description "It is used to read and write the speed of the conveyor belt on the VL10 Machine of the IT'm factory." ;
+            dct:title "Conveyor Speed" ;
+            js:readOnly false ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty,
+                        td:writeProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.VL10.Consigne%20vitesse%20convoyeur> ] ;
+            td:isObservable false ;
+            td:name "MD200" ],
+        [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates No fault on Z Axis on the VL10 Machine of the IT'm factory." ;
+            dct:title "ZAxis Status" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.VL10.AxeZ_OK> ] ;
+            td:isObservable false ;
+            td:name "I1.0" ],
+        [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates the status/condiation/position of the conveyor belt drive on the VL10 Machine of the IT'm factory." ;
+            dct:title "Conveyor drive status" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.VL10.defaut_var_convoyeur> ] ;
+            td:isObservable false ;
+            td:name "I1.3" ],
+        [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates the Cartesian motor holds the pot on Y Axis on VL10 machine of the IT'm factory.  " ;
+            dct:title "Product in gripper" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.VL10.Memo_produit_Pris> ] ;
+            td:isObservable false ;
+            td:name "M305.1" ],
+        [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates Initialisation button is able to visualize on VL10 machine of the IT'm factory." ;
+            dct:title "Visualization of the console Initialisation button" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.VL10.Visu%20bouton%20Initialisation_pupitre> ] ;
+            td:isObservable false ;
+            td:name "M80.3" ],
+        [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates Validation button is able to visualize on VL10 machine of the IT'm factory." ;
+            dct:title "Visualization of the console Validation button" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.VL10.Visu%20bouton%20Validation_pupitre> ] ;
+            td:isObservable false ;
+            td:name "M80.4" ],
+        [ a js:NumberSchema,
+                td:PropertyAffordance ;
+            dct:description "It reads the current position of  the Cartesian motor on X Axis on VL10 machine of the IT'm factory. " ;
+            dct:title "X Axis Current Position " ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.VL10.Position_Actuelle_X> ] ;
+            td:isObservable false ;
+            td:name "MD260" ],
+        [ a js:NumberSchema,
+                td:PropertyAffordance ;
+            dct:description "It reads the current value of the X Axis Index Column number on VL10 machine of the IT'm factory. " ;
+            dct:title "X Axis Index Column" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.VL10.Index_Colonne_X> ] ;
+            td:isObservable false ;
+            td:name "MW276" ],
+        [ a js:NumberSchema,
+                td:PropertyAffordance ;
+            dct:description "It is used to read the position of the cartesian motor on X-Axis on the VL10 Machine of the IT'm factory." ;
+            dct:title "X Axis Velocity Movement" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty,
+                        td:writeProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.VL10.Vitesse_Deplacement_X> ] ;
+            td:isObservable false ;
+            td:name "MD220" ],
+        [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "It is used to reset VL10 machine from default errors of the IT'm factory." ;
+            dct:title "Reset Button" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.VL10.Syst_Rearme_KA1> ] ;
+            td:isObservable false ;
+            td:name "I0.0" ],
+        [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates the status/condiation/position of the conveyor belt drive on the VL10 Machine of the IT'm factory." ;
+            dct:title "Conveyor drive status" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.VL10.defaut_var_convoyeur> ] ;
+            td:isObservable false ;
+            td:name "I1.3" ],
+        [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Detects the bottle in storage rack from the Y Axis to pick on the VL10 Machine of the IT'm factory." ;
+            dct:title "Y Axis Output" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.VL10.Sortir_AxeY> ] ;
+            td:isObservable false ;
+            td:name "Q2.3" ],
+        [ a js:NumberSchema,
+                td:PropertyAffordance ;
+            dct:description "It reads the current value of the Z Axis Index Range number on VL10 machine of the IT'm factory. " ;
+            dct:title "Z Axis Index Range " ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.VL10.Index_Rangee_Z> ] ;
+            td:isObservable false ;
+            td:name "MW274" ],
+        [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates the status of the Cartesian robot X axis at the end limit point on VL10 machine of the IT'm factory. Normally the switch is in close and the status is true, if the Cartesian robot belt reaches to end point then the switch is opened and the status is false." ;
+            dct:title "X-Axis end limit Status" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.VL10.AxeX_Fdc_Arriere_B1> ] ;
+            td:isObservable false ;
+            td:name "I0.1" ],
+        [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates default Axis controller on the VL10 Machine of the IT'm factory." ;
+            dct:title "Axis controller default" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.VL10.Defaut%20controleur%20d'axe> ] ;
+            td:isObservable false ;
+            td:name "M43.2" ],
+        [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates stop button is able to visualize on VL10 machine of the IT'm factory." ;
+            dct:title "Visualization of the console stop button" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.VL10.Visu%20bouton%20Arret_pupitre> ] ;
+            td:isObservable false ;
+            td:name "M80.1" ],
+        [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates the bottle is present at the starting position of the conveyor belt on the VL10 Machine of the IT'm factory.(upstream accumulation)." ;
+            dct:title "conveyor headstream accumulation status" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.VL10.Pots_Sas_Sortie> ] ;
+            td:isObservable false ;
+            td:name "I1.4" ],
+        [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates all intial condiations are correct on the VL10 Machine of the IT'm factory." ;
+            dct:title "Initial conditions" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.VL10.Conditions%20initiales> ] ;
+            td:isObservable false ;
+            td:name "M26.1" ],
+        [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates  the Cartesian Robot is moving towards Axe XZ Position on the VL10 Machine of the IT'm factory." ;
+            dct:title "Return Y axis" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.VL10.Rentrer_AxeY> ] ;
+            td:isObservable false ;
+            td:name "Q2.4" ],
+        [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates On button is able to visualize on VL10 machine of the IT'm factory." ;
+            dct:title "Visualization of the console On button" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.VL10.Visu%20bouton%20Marche_pupitre> ] ;
+            td:isObservable false ;
+            td:name "M80.0" ],
+        [ a js:NumberSchema,
+                td:PropertyAffordance ;
+            dct:description "It reads the current value of the pots trajectory number on VL10 machine of the IT'm factory. " ;
+            dct:title "Pots trajectory number" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.VL10.Numero%20trajectoire%20pots> ] ;
+            td:isObservable false ;
+            td:name "MW160" ],
+        [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates the status of the Cartesian robot Z axis at the bottom limit point on VL10 machine of the IT'm factory. Normally the switch is in close and the status is true, if belt reaches to bottom limit point then the switch is opened and the status is false." ;
+            dct:title "Z-Axis bottom limit Status" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.VL10.AxeZ_Fdc_Bas_B4> ] ;
+            td:isObservable false ;
+            td:name "I0.4" ],
+        [ a js:NumberSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates  the Conveyor variable speed setpoint for personalized pots on the VL10 Machine of the IT'm factory." ;
+            dct:title "Conveyor variable speed setpoint " ;
+            js:readOnly false ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty,
+                        td:writeProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.VL10.Consigne%20variateur%20convoyeur> ] ;
+            td:isObservable false ;
+            td:name "QW4" ],
+        [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates that only one pot is present in storage rack on VL10 machine of the IT'm factory.  " ;
+            dct:title "Last Pot" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.VL10.Dernier_Pot> ] ;
+            td:isObservable false ;
+            td:name "M55.6" ],
+        [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates presence of bottle at end of the conveyor belt on the VL10 of the IT'm factory. (downstream accumulation)" ;
+            dct:title "Downstream Accumulation" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.VL10.Accu_Aval_B17> ] ;
+            td:isObservable false ;
+            td:name "I82.0" ],
+        [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates refill the storage rack  on the VL10 Machine of the IT'm factory." ;
+            dct:title "Tray filling request" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.VL10.Demande%20remplissage%20barquette> ] ;
+            td:isObservable false ;
+            td:name "M27.4" ],
+        [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates default air pressure is present in the vacuum unit  on the VL10 Machine of the IT'm factory." ;
+            dct:title "Default Air Presence" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.VL10.defaut%20Air> ] ;
+            td:isObservable false ;
+            td:name "M43.1" ],
+        [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates the storage rack door is in open on the VL10 Machine of the IT'm factory." ;
+            dct:title "Open Doors" ;
+            js:readOnly true ;
+            js:writeOnly false ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget <http://localhost:3001/ns=2;s=ITm%20Factory.VL10.Portes_Ouvertes> ] ;
+            td:isObservable false ;
+            td:name "I2.0" ] ;
+    td:hasSecurityConfiguration [ a wotsec:BasicSecurityScheme ] .
+

@@ -1,0 +1,113 @@
+[
+    {
+        "@id" : "https://ci.mines-stetienne.fr/kg/itmfactory/dx10/B3",
+        "@type" : [ "http://www.productontology.org/doc/Pillow_block_bearing", "http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4#/C_AGZ376003-tax"],        
+            "http://www.w3.org/2000/01/rdf-schema#/label": "sensor with pillow blockt",
+            "https://schema.org/manufacturer": "igus",
+            "http://purl.org/dc/terms/identifier": {
+                "@id": "https://www.igus.com/product?artNr=WJ200UM-01-20-LL"
+            },
+            "http://www.w3.org/ns/sosa/observes" : {
+                "@id": "https://ci.mines-stetienne.fr/kg/itmfactory/dx10/B3#this"
+            },
+            "http://www.w3.org/2000/01/rdf-schema#/comment": "It indicates bottle reaches under hopper on DX10 machine of the IT'm factory."
+    },
+
+    {
+        "@id" : "https://ci.mines-stetienne.fr/kg/itmfactory/dx10/B4",
+        "@type" : [ "http://www.productontology.org/id/Level_Sensor", "http://www.productontology.org/id/Sensor", "http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AKP253002-tax"],
+            "http://www.w3.org/2000/01/rdf-schema#/label": "Diffuse sensor with background suppression",
+            "https://schema.org/manufacturer": "Leuze",
+            "http://purl.org/dc/terms/identifier": {
+                "@id": "https://www.leuze.com/en/usa/products_us/switching_sensors_us/optical_sensors_us/photoelectric_sensors_light_scanners_cubic_us/5_series_us/lichttaster_mit_hintergrundausblendung_us_5/ht_5_us/selector.php?supplier_aid=50135262&grp_id=1467795393506&lang=eng"
+            },
+            "http://www.w3.org/ns/sosa/observes" :{
+                "@id" : "https://ci.mines-stetienne.fr/kg/itmfactory/dx10/B4#this"
+            },
+            "http://www.w3.org/2000/01/rdf-schema/comment": "indicates product level in the tank on DX10 machine of the IT'm factory."
+    },
+
+    {
+        "@id" : "https://ci.mines-stetienne.fr/kg/itmfactory/dx10/conveyor/B5",
+        "@type" : [ "http://www.productontology.org/id/Level_Sensor", "http://www.productontology.org/id/Sensor", "http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AKP253002-tax"],
+            "http://www.w3.org/2000/01/rdf-schema#/label": "Diffuse sensor with background suppression",
+            "https://schema.org/manufacturer": "Leuze",
+            "http://purl.org/dc/terms/identifier": {
+                "@id": "https://www.leuze.com/en/usa/products_us/switching_sensors_us/optical_sensors_us/photoelectric_sensors_light_scanners_cubic_us/5_series_us/lichttaster_mit_hintergrundausblendung_us_5/ht_5_us/selector.php?supplier_aid=50135262&grp_id=1467795393506&lang=eng"
+            },
+            "http://www.w3.org/ns/sosa/observes" :{
+                "@id" : "https://ci.mines-stetienne.fr/kg/itmfactory/dx10/B5#this"
+            },
+            "http://www.w3.org/2000/01/rdf-schema/comment": "indicates bottle reaches to end of conveyor belt on DX10 machine of the IT'm factory."
+    },
+
+    {
+        "@id" : "https://ci.mines-stetienne.fr/kg/itmfactory/dx10/conveyor/M1",
+        "@type" : [ "http://www.productontology.org/doc/Engine", "http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AKE175002-tax"],
+            "http://www.w3.org/2000/01/rdf-schema#/label": "Gear Motor",
+            "https://schema.org/manufacturer": "TRANSTECNO",
+            "http://purl.org/dc/terms/identifier": {
+                "@id": "https://www.maxodeals.com/mdenglish/transtecno-tcm030-0220-ttn-ts6324b14-used-ump"
+            },
+            "http://www.w3.org/ns/sosa/observes" :{
+                "@id" : "https://ci.mines-stetienne.fr/kg/itmfactory/dx10/M1#this"
+            },
+            "http://www.w3.org/2000/01/rdf-schema/comment": "motor for the conveyor belt on the DX10 Machine of the IT'm factory."
+    },
+
+    {
+        "@id" : "https://ci.mines-stetienne.fr/kg/itmfactory/dx10/silo/M2",
+        "@type" : ["http://www.productontology.org/doc/Brushless_DC_electric_motor", "http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AJZ041005-tax"],
+            "http://www.w3.org/2000/01/rdf-schema#/label": "brushless motor",
+            "https://schema.org/manufacturer": "SIEMENS",
+            "http://purl.org/dc/terms/identifier": {
+                "@id": "https://mall.industry.siemens.com/mall/en/kr/Catalog/Product/1FL6024-2AF21-1AA1"
+            },
+            "http://www.w3.org/ns/sosa/observes" :{
+                "@id" : "https://ci.mines-stetienne.fr/kg/itmfactory/dx10/M2#this"
+            },
+            "http://www.w3.org/2000/01/rdf-schema/comment": "motor for the silo tank on the DX10 Machine of the IT'm factory."
+    },
+
+    {
+        "@id" : "https://ci.mines-stetienne.fr/kg/itmfactory/dx10/silo/S3",
+        "@type" : ["http://www.productontology.org/id/Switch", "http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AAC028004-tax"],
+            "http://www.w3.org/2000/01/rdf-schema#/label": "Enclosed Switch",
+            "https://schema.org/manufacturer": "OMRON industrial automation",
+            "http://purl.org/dc/terms/identifier": {
+                "@id": "https://www.ia.omron.com/product/item/11177/"
+            },
+            "http://www.w3.org/ns/sosa/observes" :{
+                "@id" : "https://ci.mines-stetienne.fr/kg/itmfactory/dx10/S3#this"
+            },
+            "http://www.w3.org/2000/01/rdf-schema/comment": "Indicates tank reach ideal position on the DX10 Machine of the IT'm factory."
+    },
+
+    {
+        "@id" : "https://ci.mines-stetienne.fr/kg/itmfactory/dx10/silo/S4",
+        "@type" : [ "http://www.productontology.org/id/Switch", "http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AAC028004-tax"],
+            "http://www.w3.org/2000/01/rdf-schema#/label": "Enclosed Switch",
+            "https://schema.org/manufacturer": "OMRON industrial automation",
+            "http://purl.org/dc/terms/identifier": {
+                "@id": "https://www.ia.omron.com/product/item/11177/"
+            },
+            "http://www.w3.org/ns/sosa/observes" :{
+                "@id" : "https://ci.mines-stetienne.fr/kg/itmfactory/dx10/S4#this"
+            },
+            "http://www.w3.org/2000/01/rdf-schema/comment": "Indicates tank at starting position on the DX10 Machine of the IT'm factory."
+    },
+
+    {
+        "@id" : "https://ci.mines-stetienne.fr/kg/itmfactory/dx10/silo/S5",
+            "@type" : [ "http://www.productontology.org/id/Switch", "http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AAC028004-tax"],
+            "http://www.w3.org/2000/01/rdf-schema#/label": "Enclosed Switch",
+            "https://schema.org/manufacturer": "OMRON industrial automation",
+            "http://purl.org/dc/terms/identifier": {
+                "@id": "https://www.ia.omron.com/product/item/11177/"
+            },
+            "http://www.w3.org/ns/sosa/observes" :{
+                "@id" : "https://ci.mines-stetienne.fr/kg/itmfactory/dx10/S5#this"
+            },
+            "http://www.w3.org/2000/01/rdf-schema/comment": "Indicates tank at ending position on the DX10 Machine of the IT'm factory."
+    }
+]

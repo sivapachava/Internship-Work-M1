@@ -1,0 +1,37 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix eco: <http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4#> .
+@prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
+@prefix htv: <http://www.w3.org/2011/http#> .
+@prefix js: <https://www.w3.org/2019/wot/json-schema#> .
+@prefix onto: <https://ci.mines-stetienne.fr/kg/ontology#> .
+@prefix pto: <http://www.productontology.org/id/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix td: <https://www.w3.org/2019/wot/td#> .
+
+<https://ci.mines-stetienne.fr/kg/itmfactory/vl10/B8> a eco:C_AGZ376003,
+        pto:Proximity_sensor,
+        sosa:Sensor ;
+    rdfs:label "Miniature photo-electric proximity sensor" ;
+    dct:identifier "https://shop.appliedc.com/products/1042049" ;
+    schema1:manufacture "SICK Sensor Intelligence" ;
+    rdfs:comment "Sensor respondes to a change in the input data and generates a result"@en ;
+    skos:prefLabel "B8" ;
+    sosa:observes "Indicates presence of bottle at the starting position of the conveyor belt on the VL10 Machine(upstream presence)"@en ;
+    td:hasPropertyAffordance [ a onto:OpticalSensorStatus,
+                js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates the bottle is present at the starting position of the conveyor belt on the VL10 Machine(upstream presence)."@en ;
+            dct:title "conveyor head accumulation status" ;
+            js:readOnly "True" ;
+            js:writeOnly "False" ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget "https://ci.mines-stetienne.fr/simu/storageRack/properties/Pots_Sas_Sortie" ] ;
+            td:isObservable "False" ;
+            td:name "Pots_Sas_Sortie" ] .
+

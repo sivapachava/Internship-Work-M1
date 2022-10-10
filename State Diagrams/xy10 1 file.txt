@@ -1,0 +1,21 @@
+@startuml
+
+state c <<choice>>
+state c1 <<choice>>
+[*] --> WaitingForOperation
+
+WaitingForOperation --> c : OpticalSensor1I3.0==True&OpticalSensor2I3.1==True
+
+
+c -->MovingPairOffItems : FreeSlots>=2&OpticalSensorPackageI2.7==True
+c --> MovingPackage : FreeSlots<2&OpticalSensorPackageI2.7==False
+
+MovingPairOffItems -up-> WaitingForOperation
+MovingPackage -up-> WaitingForOperation
+
+MovingPackage --> c1
+c1 --> movingtofirstconveyor : opticalsensorsecondconveyorI2.6 == True
+c1 --> ZAxisBreak : opticalsensorsecondconveyorI2.6 == False
+WaitingForOperation -right-> [*]
+ZAxisBreak -up-> WaitingForOperation
+@enduml

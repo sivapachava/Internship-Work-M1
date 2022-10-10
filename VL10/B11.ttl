@@ -1,0 +1,37 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix eco: <http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4#> .
+@prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
+@prefix htv: <http://www.w3.org/2011/http#> .
+@prefix js: <https://www.w3.org/2019/wot/json-schema#> .
+@prefix onto: <https://ci.mines-stetienne.fr/kg/ontology#> .
+@prefix pto: <http://www.productontology.org/id/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix td: <https://www.w3.org/2019/wot/td#> .
+
+<https://ci.mines-stetienne.fr/kg/itmfactory/vl10/B11> a eco:C_AKP251002,
+        pto:Photoelectric_sensor,
+        sosa:Sensor ;
+    rdfs:label "Polarized retro-reflective photoelectric sensor" ;
+    dct:identifier "https://www.leuze.com/en/usa/products_us/switching_sensors_us/optical_sensors_us/photoelectric_sensors_light_scanners_cubic_us/5_series_us/retro_reflective_photoelectric_sensors_us_2/prk5_us/selector.php?supplier_aid=50128200&grp_id=A1-1-1-1-3-2-1&lang=eng" ;
+    schema1:manufacture "Leuze" ;
+    rdfs:comment "photoelectric sensor sensed presence of an object by using a light transmitter"@en ;
+    skos:prefLabel "B10" ;
+    sosa:observes "It indicates position, gap, and alignment between moving components in production lines"@en ;
+    td:hasPropertyAffordance [ a onto:OpticalSensorStatus,
+                js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates the status/condiation/position of the conveyor belt drive on the VL10 Machine of the IT'm factory."@en ;
+            dct:title "Conveyor drive status" ;
+            js:readOnly "True" ;
+            js:writeOnly "False" ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget "https://ci.mines-stetienne.fr/simu/storageRack/properties/Défaut_var_convoyeur" ] ;
+            td:isObservable "False" ;
+            td:name "Défaut_var_convoyeur" ] .
+

@@ -1,0 +1,32 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix eco: <http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4#> .
+@prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
+@prefix htv: <http://www.w3.org/2011/http#> .
+@prefix js: <https://www.w3.org/2019/wot/json-schema#> .
+@prefix pto: <http://www.productontology.org/id/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix td: <https://www.w3.org/2019/wot/td#> .
+
+<https://ci.mines-stetienne.fr/kg/itmfactory/xy10/B14> a eco:C_AKL924002,
+        pto:Vacuum_pump ;
+    rdfs:label "Vacuum Unit - Ejector System/ Vacuum Pump System"@en ;
+    dct:identifier "https://www.smc.eu/en-eu/products/zk2-a~164877~nav?productId=164879" ;
+    schema1:manufacture "SMC" ;
+    rdfs:comment "vaccum unit is used to change the pressure in a contained space to create a motion"@en ;
+    skos:prefLabel "B14" ;
+    td:hasPropertyAffordance [ a js:BooleanSchema,
+                td:PropertyAffordance ;
+            dct:description "Indicates the belt is reaches to the intial position on the Z axis on XY10 machine of the IT'm factory. Normally the switch is in open and the status is false, if belt reaches to intial position then the switch is closed and the status is true."@en ;
+            dct:title "Vaccum switch1 Reference" ;
+            js:readOnly "True" ;
+            js:writeOnly "False" ;
+            td:hasForm [ a hctl:Form ;
+                    htv:methodName "GET" ;
+                    hctl:forContentType "application/json" ;
+                    hctl:hasOperationType td:readProperty ;
+                    hctl:hasTarget "https://ci.mines-stetienne.fr/simu/packagingWorkshop/properties/Vacu_Prise_Prod1_B14_1" ] ;
+            td:isObservable "False" ;
+            td:name "Vacu_Prise_Prod1_B14_1" ] .
+

@@ -1,0 +1,22 @@
+@startuml
+
+state fork_state <<fork>>
+state c <<choice>>
+
+[*] --> fork_state
+fork_state -down-> c
+c --> ConveyorIdle : ConveyorSpeed == 0
+c --> CoveyorInMovement : ConveyorSpeed > 0
+ConveyorIdle --> fork_state
+CoveyorInMovement --> fork_state
+
+fork_state -->WaitingForOperation : WriteProperty(ConveyorSpeed,Speed)
+WaitingForOperation --> opendoorrequestI2.0 : InvokeAction
+state opendoorrequestI2.0{
+[*] --> opendoorI2.0 : opendoorI2.0/CoveyorSpeed == 0
+[*] --> lockdoor : lockdoor/ConveyorSpeed > 0
+}
+
+WaitingForOperation -right-> [*]
+
+@enduml
