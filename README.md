@@ -6,3 +6,5 @@ Industrial equipment, sensors and actuators are represented as entities that are
 of system engineering. The existing KG for the IT’m factory already includes these entities, but it is not sufficient for industrial control. Specifically, 
 it does not contain interdependencies between the different properties of the overall production system. So, the main objective of the internship
 is to create the KG, such that the full state of the system can be obtained from an evaluation of its observable properties on the overall machines.
+
+https://siram.mecaconcept.com/
